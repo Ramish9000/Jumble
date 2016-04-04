@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<!-- ################################ LIBRARIES, SCRIPTS, ETC ################### -->
+<head>
+	<meta charset="utf-8">
+	<title>JumbulIt</title>
+
+	<!-- Fullpage -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.5/jquery.fullPage.css" />
+
+	<!-- JQuery Library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- Fullpage(2) -->
+	<link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.5/vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.5/jquery.fullPage.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+	
+
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+
+	<!-- underscore -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+	<!-- Local Files -->
+	<script type="text/javascript" src="/scripts/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="/styles/main.css">
+
+</head>
+<!-- ############################################################# -->
+<body>
+	<!-- NAVBAR -->
+	<div id="navbar">
+		<nav>
+		  <div class="nav-wrapper">
+		  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		    <a href="#" class="brand-logo center">
+		    	<img src="/images/logo.png" class="logo-image animated bounce">
+		    </a>
+		    <ul id="nav-mobile-left" class="left hide-on-med-and-down">
+		      <li><a href="#landingPage" class="logged-out">Home</a></li>
+		      <li><a href="#about" class="logged-out">About</a></li>
+		      <li><a href="#madeBy" class="logged-out">Made By</a></li>
+		    </ul>
+		    <ul id="nav-mobile-right" class="right hide-on-med-and-down">
+		    	<li><a href="/" class="categories-link logged-in">Categories</a></li>
+		      <li><a href="/">Jumbles</a></li>
+		      <li><a href="/" class="profile-link logged-in">Profile</a></li>
+		      <li><a href="#registerModal" class="register-link logged-out modal-trigger">Sign up</a></li>
+		      <li><a href="#loginModal" class="login-link logged-out modal-trigger">Log In</a></li>
+		      <li><a href="/" class="logout-link logged-in">Log Out</a></li>
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+	<!-- 		    	****************** WELCOME PAGE ******************** -->
+	<!-- Registration -->
+	<div class="modal" id="registerModal">
+		<div class="modal-content">
+			<h4>Register</h4>
+			<form id="register" class="col s12" method="post" action="/register">
+				<div class="row">
+					<input type="text" name="username" class="validate" placeholder="Username" autocomplete="off">
+					<input type="text" name="fullName" class="validate" placeholder="Full name" autocomplete="off">
+					<input type="text" name="picture_url" class="validate" placeholder="picture_url" autocomplete="off">
+					<input type="email" name="email" class="validate" placeholder="Email" autocomplete="off">
+					<input type="password" name="password" class="validate" placeholder="Password" autocomplete="off">
+				</div>
+				<button type="submit" class="btn waves-effect modal-action modal-close">Submit<i class="material-icons right">send</i></button>
+			</form>
+		</div>
+	</div>
+	<!-- Login -->
+	<div class="modal" id="loginModal">
+		<div class="modal-content">
+			<h4>Login</h4>
+			<form id="login" class="col s12" method="post" action="/login">
+				<input type="email" name="email" id="login-email" class="validate" placeholder="Email">
+				<input type="password" name="password" id="login-password" class="validate"  placeholder="Password">
+				<button type="submit" class="btn waves-effect modal-action modal-close">Submit<i class="material-icons right">send</i></button>
+			</form>
+		</div>
+	</div>
+
+	<div id="fullpage">
+		<div class="section" id="home">
+			<p class="wlcm-txt animated fadeIn">Welcome to Jumble.</p>
+
+			<p class="wlcm-txt animated fadeIn">A site where you can procrastinate to your heart's content!</p>
+		</div>
+
+		<div class="section" id="abt-us-sct">
+			<p class="abt-us-txt"> We provide the latest news stories and videos for the topics you enjoy most. Just pick your categories and go...</p>
+			<img src="/images/jumble1.png" class="about-img animated fadeInUpBig" >
+			<img src="/images/jumble2.png" class="about-img animated fadeInUpBig" >
+			<img src="/images/jumble3.png" class="about-img animated fadeInUpBig" >
+		</div>
+
+		<!-- MADEBY SCREEN -->
+		<div class="section" id="made-by">
+			<div class="row">
+				<div class="col s3">
+					<div class="widget">
+						<div class="cover">
+							<img src="http://www.barrbeaconschool.co.uk/wp-content/uploads/2015/02/glacier-lagoon-iceland-hd-wallpaper_0_0.jpg" />
+						</div>
+						<img src="./images/joe.jpeg" class="photo" />
+						<h1>Joe Az</h1>
+						<h2>JAzadehdel@gmail.com</h2>
+						<h3>Belieber</h3>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="widget">
+						<div class="cover">
+							<img src="http://cdn1.ssninsider.com/wp-content/uploads/2013/07/Timon-and-Pumbaa.jpg" />
+						</div>
+						<img src="./images/gows.jpeg" class="photo" />
+						<h1>Gows Kiri</h1>
+						<h2>gowsikiri@hotmail.co.uk</h2>
+						<h3>Timon</h3>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="widget">
+						<div class="cover">
+							<img src="http://eastsbeach.com.au/assets/Uploads/_resampled/SetWidth2000-Kiama-Events-Easts-Beach-PB.jpg" />
+						</div>
+						<img src="./images/marc.jpeg" class="photo" />
+						<h1>Marc Baghdadi</h1>
+						<h2>marcbaghdadi@gmail.com</h2>
+						<h3></h3>
+					</div>
+				</div>
+				<div class="col s3">
+					<div class="widget">
+						<div class="cover">
+							<img src="http://xyer.co/wallpaper/28/9/nature-trees-wallpaper-background-hd.jpg" />
+						</div>
+						<img src="./images/ramish.jpeg" class="photo" />
+						<h1>Ramish Mian</h1>
+						<h2>ramish1991@hotmail.com</h2>
+						<h3></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 		    	**************HOMEPAGE************************ -->
+	<section id="categoryChoice">
+		<h4>Choose your categories</h4>
+		<form id="cats-form" class="login col s12" method="put" action="/users">
+			<div class="row">
+			</div>
+			<button type="submit" class="btn waves-effect">Save changes</button>
+			<button type="button" id="cancelCats" class="btn waves-effect">Cancel</button>
+		</form>
+	</section>
+
+	<section id="newsfeed">
+		<script type="text/x-template" id="list-template">
+			<div class="col s12 m4">
+				<div class="card animated fadeInUpBig">
+					<div class="card-image">
+						<img class="materialboxed" src=<%= image %>>
+						<span class="card-title"></span>
+					</div>
+					<div class="card-content">
+						<p class="articles"> <%= title %> </p>
+					</div>
+					<div class="card-action">
+						<a class="modal-trigger waves-effect waves-circle waves-light cyan btn-floating secondary-content" href="#<%= _id %>"><i class="material-icons">add</i></a>
+					</div>
+				</div>
+			</div>
+			<div id="<%= _id %>" class="modal modal-fixed-footer">
+				<div class="modal-content">
+					<h4><%= title %></h4>
+					<p><%= content %></p>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="modal-action modal-close waves-effect waves-purple btn-flat" id="goback">Go Back</button>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/x-template" id="video-template">
+			<div class="col s12 m3">
+				<div class="card animated fadeInUpBig" id="video-card">
+					<div class="card-image">
+						<div class="video-container">
+							<iframe width="350" height="200" src="https://www.youtube.com/embed/<%= video_url %>" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="card-content">
+							<p><%= title %></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+		<div class="row" id="my-list"></div>
+		<div class="row" id="video-list"></div>
+	</section>
+	<!-- 		    	**************PROFILE PAGE************************ -->
+	<section id="profileSection">
+		<script type="text/x-template" id="profile-template">
+			<div class="widget animated fadeInUpBig">
+			  <div class="cover">
+			    <img src="http://www.barrbeaconschool.co.uk/wp-content/uploads/2015/02/glacier-lagoon-iceland-hd-wallpaper_0_0.jpg" />
+			  </div>
+			  <img src="<%= user.local.picture_url %>" class="photo" />
+			  <h1><%= user.local.fullName %></h1>
+			  <h2><%= user.local.email %></h2>
+			  <h3><%= user.favourite_categories %></h3>
+			</div>
+		</script>
+		<div class="row" id="my-info"></div>
+	</section>
+</body>
+</html>

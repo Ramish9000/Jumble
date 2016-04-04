@@ -1,0 +1,5 @@
+Guest should be able to view pins
+
+User should be able to view pins
+User should be able to favourite pins
+User should be able to view users
